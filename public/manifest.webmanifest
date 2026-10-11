@@ -1,0 +1,62 @@
+{
+  "id": "/",
+  "name": "Jarvis",
+  "short_name": "Jarvis",
+  "description": "Jarvis Android Voice Assistant with Urdu & English Male Voice, Home Screen Quick Actions, and Background Operation.",
+  "theme_color": "#030712",
+  "background_color": "#030712",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "/?source=homescreen",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Jarvis Voice Command",
+      "short_name": "Speak to Jarvis",
+      "description": "Launch Jarvis from Home Screen and start listening immediately",
+      "url": "/?action=voice",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Android Control Hub",
+      "short_name": "Android Controls",
+      "description": "Open Android System Settings, Apps, Wi-Fi, Bluetooth & Background Controls",
+      "url": "/?action=android_control",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Open Android Settings",
+      "short_name": "Phone Settings",
+      "description": "Directly launch Android device settings",
+      "url": "/?action=open_settings",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "WhatsApp & Quick Call",
+      "short_name": "WhatsApp / Call",
+      "description": "Open WhatsApp or Phone Dialer via Jarvis",
+      "url": "/?action=quick_comm",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

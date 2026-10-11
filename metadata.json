@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS Mark-LV AI Assistant",
+  "description": "Full-featured JARVIS Mark-LV AI Assistant with 3D wireframe face mesh avatar, real-time viseme lip-sync, Gemini voice & vision intelligence, 20+ autonomous action modules, persistent memory vault, and system command HUD.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

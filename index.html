@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Jarvis" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script>
+      window.addEventListener("unhandledrejection", function (e) {
+        var msg = String((e && e.reason && e.reason.message) || (e && e.reason) || "");
+        if (msg.indexOf("WebSocket closed without opened") !== -1 || msg.indexOf("[vite]") !== -1) {
+          e.preventDefault();
+        }
+      });
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (r) {
+            if (r.active && r.active.scriptURL && r.active.scriptURL.indexOf("dev-sw") !== -1) {
+              r.unregister();
+            }
+          });
+        });
+      }
+    </script>
+    <title>Jarvis</title>
+    <meta name="description" content="Jarvis AI Assistant with 3D face mesh avatar, Urdu & English male/female voices, and OpenAI primary engine." />
+    <meta property="og:title" content="Jarvis" />
+    <meta property="og:description" content="Jarvis AI Assistant with 3D face mesh avatar, Urdu & English male/female voices, and OpenAI primary engine." />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
